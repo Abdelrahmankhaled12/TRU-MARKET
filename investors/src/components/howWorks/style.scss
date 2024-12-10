@@ -1,0 +1,91 @@
+@import '../../mixins.scss';
+
+.howWorks {
+    background-color: #fdfdfd;
+    padding: var(--section-padding) 0px;
+    overflow: hidden;
+
+    .contentWrapper {
+        .item {
+            margin-top: 10px;
+
+            h1 {
+                color: var(--primary);
+                text-transform: uppercase;
+                margin-bottom: 45px;
+                font-weight: 600;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                align-items: center;
+
+                @include md {
+                    grid-template-columns: 1.5fr 1fr;
+                }
+
+                .text {
+                    order: 1;
+
+                    .work {
+                        padding-bottom: 40px;
+                        padding-left: 35px;
+                        position: relative;
+                        cursor: auto;
+                        width: 98%;
+                        margin-left: auto;
+
+                        h2 {
+                            color: var(--primary);
+                            text-transform: uppercase;
+                            font-size: 22px;
+                            font-weight: 600;
+
+                            @include sm {
+                                font-size: 1.5em;
+                            }
+                        }
+
+                        p {
+                            color: #7C7C7C;
+                            font-size: 14px;
+                            margin-top: 10px;
+                            font-weight: 400;
+                            line-height: 1.7;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: var(--primary);
+                            border-radius: 50%;
+                            transition: 0.5s;
+                            height: 10px;
+                            width: 10px;
+                            left: -4px;
+                            top: 10px;
+                        }
+                    }
+                }
+
+                .image {
+                    order: 2;
+
+                    @include md {
+                        order: 1;
+                    }
+
+                    video {
+                        display: block;
+                        width: 600px;
+                        height: 600px;
+
+                        margin: 20px auto 0px;
+                    }
+                }
+            }
+        }
+    }
+}

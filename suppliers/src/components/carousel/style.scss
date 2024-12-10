@@ -1,0 +1,23 @@
+@import "../../mixins.scss";
+
+
+.slider {
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+    @include md {
+        width: auto;
+        margin: 0 0 0 auto;
+    }
+    position: relative;
+    .hide {
+        position: absolute;
+        transition: 0.5s;
+        left: 0;
+        opacity: 0;
+        top: 0;
+    }
+    .active {
+        opacity: 1;
+    }
+}

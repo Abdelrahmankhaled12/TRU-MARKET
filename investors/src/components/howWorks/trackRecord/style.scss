@@ -1,0 +1,181 @@
+@import '../../../mixins.scss';
+
+.trackRecord {
+    margin-top: 80px;
+    overflow: hidden;
+
+    h1 {
+        color: var(--primary);
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .table {
+        overflow-x: auto;
+        margin-top: 30px;
+        width: 100%;
+
+        table {
+            overflow-x: auto;
+            width: 1200px;
+
+            thead {
+
+                tr {
+                    th {
+                        text-align: start;
+                        padding: 10px 20px;
+                        text-transform: uppercase;
+                        color: #2A2A2A;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 10px 20px;
+
+                        &:nth-of-type(1) {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            img {
+                                width: 56px;
+                                height: 56px;
+                                margin-right: 5px;
+                            }
+
+                            div {
+                                p {
+                                    text-transform: uppercase;
+                                    color: #2A2A2A;
+                                    margin-bottom: 4px;
+                                    font-weight: 600;
+                                }
+
+                                .flag {
+                                    display: flex;
+                                    align-items: center;
+
+                                    .icon {
+                                        img {
+                                            width: 24px !important;
+                                            height: 14px !important;
+                                            border-radius: 4px;
+                                            margin-right: 0px;
+                                        }
+                                    }
+                                    span {
+                                        margin-left: 5px;
+                                        font-size: 14px;
+                                        color: #7C7C7C;
+                                        font-weight: 400;
+                                    }
+                                }
+
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            div {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+
+                                p {
+                                    color: #101010;
+                                    font-weight: 600;
+                                    font-size: 15px;
+
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(3) {
+                            div {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+
+                                p {
+                                    color: #101010;
+                                    font-size: 15px;
+                                    font-weight: 600;
+
+                                    span {
+                                        color: var(--primary);
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(4) {
+                            span {
+                                display: block;
+                                background-color: var(--primary);
+                                line-height: 27.2px;
+                                padding: 2px 5px 0px 15px;
+                                height: 29px;
+                                border-radius: 7px;
+                                color: #5DAF50;
+                                font-weight: 500;
+                                background-color: #EFF7EE;
+                            }
+                        }
+
+                        &:nth-of-type(5) {
+                            .delivery {
+                                .top {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    p {
+                                        font-size: 13px;
+                                        margin-bottom: 7px;
+                                        font-weight: 500;
+                                        &.date {
+                                            color: #7C7C7C;
+                                        }
+                                        &.time {
+                                            color:#5DAF50;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        background-color: var(--primary);
+        border: 1px solid var(--primary);
+        width: 150px;
+        height: 48px;
+        font-size: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.5s;
+        font-weight: 600;
+        color: #2A2A2A;
+        margin: 50px auto;
+        display: block;
+
+        @include sm {
+            width: 156px;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+    }
+}

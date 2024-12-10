@@ -1,0 +1,141 @@
+@import '../../../mixins.scss';
+
+.investing {
+    background-color: var(--black);
+    padding: var(--section-padding) 0px;
+    overflow: hidden;
+
+    .investmentOptions {
+        margin-top: 70px;
+
+        h1 {
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+            font-size: 25px;
+            font-weight: 600;
+            @include sm {
+                font-size: 2em;
+            }
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 35px;
+            gap: 30px;
+
+            @include md {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .box {
+                border: 1px solid rgba(104, 192, 89, 0.4);
+                padding: 1.5rem;
+                text-align: center;
+                border-radius: 29px;
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background: linear-gradient(180deg, rgba(12, 68, 5, 0), rgba(12, 68, 5, 0.55));
+
+                h2 {
+                    color: #FFFFFF;
+                    line-height: 1.3;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+                .flex {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    margin: 15px 0px;
+
+                    .apy {
+                        border: 1px solid var(--primary);
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 0px 15px 0px 15px;
+                        border-radius: 21px;
+                        gap: 8px;
+
+                        span {
+                            display: block;
+                            font-size: 16px;
+                            color: #ffffff;
+                            position: relative;
+                            top: 1px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .time {
+                        border: 1px solid var(--primary);
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 0px 0px 0px 15px;
+                        border-radius: 21px;
+                        gap: 8px;
+
+                        span {
+                            display: block;
+                            font-size: 14px;
+                            color: #ffffff;
+                            position: relative;
+                            top: 1px;
+                            font-weight: 300;
+                            text-transform: uppercase;
+
+                        }
+                    }
+                }
+
+                p {
+                    color: #ffffff;
+                    margin: 15px 0px;
+                    font-size: 15px;
+                    padding: 0px 10px;
+                    line-height: 1.5;
+                    font-weight: 300;
+                }
+
+                button {
+                    background-color: var(--primary);
+                    border: 1px solid var(--primary);
+                    width: 150px;
+                    height: 48px;
+                    font-size: 16px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    font-weight: 600;
+                    color: #2A2A2A;
+
+                    @include sm {
+                        width: 159px;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                        color: var(--primary);
+                    }
+                }
+
+                &:nth-child(3) {
+                    button {
+                        width: 200px;
+
+                        @include sm {
+                            width: 241px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

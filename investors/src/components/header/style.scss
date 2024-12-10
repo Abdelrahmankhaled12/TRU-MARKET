@@ -1,0 +1,99 @@
+@import "../../mixins.scss";
+
+.header {
+    position: absolute;
+    transform: translateY(0);
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    transition: all ease 0.5s;
+
+    &.top {
+        background: transparent;
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+    }
+
+    &.show {
+        background-color: var(--black);
+        box-shadow: 0px 4px 8px -4px rgba(58, 53, 65, .42);
+    }
+
+    &.hide {
+        transform: translateY(-60px);
+    }
+
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            img {
+                width: 150px;
+            }
+        }
+
+        ul {
+            display: none;
+            list-style: none;
+            color: #ffffff;
+            gap: 30px;
+            position: relative;
+
+            @include sm {
+                display: flex;
+            }
+
+            li {
+                a {
+                    position: relative;
+                    font-weight: 400;
+                    text-decoration: none;
+                    display: block;
+                    color: #ffffff;
+                    &.active {
+                        color: var(--primary);
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 6px;
+                            height: 6px;
+                            background-color: var(--primary);
+                            border-radius: 50%;
+                            bottom: -20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        button {
+            background-color: var(--primary);
+            border: 1px solid var(--primary);
+            width: 150px;
+            height: 48px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.5s;
+            font-weight: 600;
+            color: #2A2A2A;
+
+            @include sm {
+                width: 156px;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: var(--primary);
+            }
+        }
+    }
+
+}

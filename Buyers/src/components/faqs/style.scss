@@ -1,0 +1,56 @@
+@import '../../mixins.scss';
+
+.faqs {
+    padding: var(--section-padding) 0px;
+    .contentWrapper {
+        h1 {
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0px;
+            @include md {
+                gap: 30px;
+                grid-template-columns: 1fr 1fr;
+            }
+            .accordion {
+                background-color: transparent !important;
+                height: fit-content;
+                box-shadow: none;
+                margin-top: 10px;
+                * {
+                    font-family: GraphikMedium !important;
+                    padding: 0;
+                }
+                .titleAccordion {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: var(--primary);
+                    position: relative;
+                    text-transform: uppercase;
+                    @include sm {
+                        font-size: 23px;
+                    }
+                }
+                .bodyAccordion {
+                    font-size: 14.5px;
+                    font-weight: 400;
+                    color: #7C7C7C;
+                    position: relative;
+                    line-height: 1.6;
+                    font-family: GraphikRegular !important;
+
+                }
+                &::before {
+                    position: relative;
+                }
+                svg {
+                    color: #000000;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
